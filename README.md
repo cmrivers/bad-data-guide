@@ -25,6 +25,7 @@ If you have questions about this guide please email [Chris](mailto:c@qz.com). Go
 * [Categories are badly chosen](#categories-are-badly-chosen)      
 * [Field names are ambiguous](#field-names-are-ambiguous)      
 * [Provenance is not documented](#provenance-is-not-documented)   
+* [Collection has changed over time](#changes-over-time)
 * [Suspicious numbers are present](#suspicious-numbers-are-present)      
 * [Data are too coarse](#data-are-too-coarse)          
 * [Totals differ from published aggregates](#totals-differ-from-published-aggregates)
@@ -194,6 +195,7 @@ For reasons beyond obscure, Excel's default date from which it counts all other 
 
 Not all numerals are numbers. For instance, the US Census Bureau uses "FIPS codes" to identify every place in the United States. These codes are of various lengths and are numeric. However, they are *not* numbers. `037` is the FIPS code for Los Angeles County. It is not the number `37`. The numerals `37` are, however, a valid FIPS code: for North Carolina. Excel and other spreadsheets will often make the mistake of assuming numerals are numbers and stripping the leading zeros. This can cause all kinds of problems if you try to convert it to another file format or merge it with another dataset. Watch out for data where this has happened before it was given to you.
 
+
 ## Issues that you should solve
 
 ### Text is garbled     
@@ -336,6 +338,11 @@ See also:
 * [Provenance is not documented](#provenance-is-not-documented)  
 * [Data asserts unrealistic precision](#data-asserts-unrealistic-precision)
 * [It's too good to be true](#its-too-good-to-be-true)
+
+
+### Collection process changes over time
+When working with time series, verify that trends are not just changes in the collection process. Sometimes inclusion criteria for categorical variables gets redefined, the phrasing of a survey question is changed, or data collection moves from land lines to cell phones. These adjustments can introduce inconsistencies in the data that are difficult to discern from "real" changes. Sudden spikes or drops in the time series are clues, as are fluctuations that coincide with notable dates like Jan 1.
+
 
 ### Data asserts unrealistic precision
 
